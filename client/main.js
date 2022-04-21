@@ -38,7 +38,7 @@ function submitHandler(e) {
 }
 
 function createCarCard(car) {
-    carCard = document.createElement('div')
+     const carCard = document.createElement('div')
 
     carCard.classList.add('car-card')
     
@@ -54,12 +54,13 @@ function createCarCard(car) {
     
     
     
+    
     carsContainer.appendChild(carCard)
 }
 
 function displayCars(arr) {
 
-    carsContainer.innerHTML= ``
+    carsContainer.innerHTML = ``
     for (let i = 0; i < arr.length; i++) {
         createCarCard(arr[i])
     }
@@ -67,4 +68,4 @@ function displayCars(arr) {
 
 form.addEventListener('submit', submitHandler)
 
-// getAllCars()
+getAllCars()

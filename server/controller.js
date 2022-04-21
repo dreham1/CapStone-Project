@@ -1,5 +1,5 @@
 const cars = require('./db.json')
-let globalID = 11
+let globalID = 2
 
 
 module.exports = {
@@ -21,7 +21,11 @@ module.exports = {
         globalID++
     },
 
-    
+    deleteCars: (req, res) => {
+        let index = cars.findIndex(car => car.id === +req.params.id)
+        cars.splice(index, 1)
+        res.status(200).send(cars)
+    },
 
     updateCar: (req, res) => {
         let { id } = req.params
@@ -29,15 +33,11 @@ module.exports = {
 
         let index = cars.findIndex(car => car.id === +id)
 
-        if (cars[index].rating === 10 && type === 'plus') {
-            res.status(400).send('10 is max rating')
+        if (cars[index].rating === 5 && type === 'plus') {
+            res.status(400).send('5 is max rating')
         } else if (cars[index].rating === 1 && type === 'minus') {
             res.status(400).send('1 is the lowest')
         }
     },
-    deleteCars: (req, res) => {
-        let index = cars.findIndex(car => car.id === +req.params.id)
-        cars.splice(index, 1)
-        res.status(200).send(cars)
-    },
+    
 }

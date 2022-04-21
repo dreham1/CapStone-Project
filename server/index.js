@@ -13,7 +13,7 @@ app.use(cors())
 
 app.get('/api/cars', getCars)
 app.post('/api/cars', createCar)
-app.delete('/api/cars/:id',deleteCars)
+app.delete('/api/cars/:id', deleteCars)
 app.put('/api/cars/:id', updateCar)
 
 

@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #11e7dd;
+    background-color: #090a0a;
 }
 
 header {
@@ -22,9 +22,9 @@ main {
 }
 
 form {
-    width: 350px;
+    width: 700px;
     height: 350px;
-    background-color: blanchedalmond;
+    background-color: rgb(15, 229, 232);
     position: relative;
     display: flex; 
     flex-direction: column;
@@ -48,11 +48,11 @@ input[type='text'] {
     border: none;
     border-bottom: 2px solid #232323;
     color: #232323;
-    background-color: blanchedalmond;
+    background-color: rgb(245, 182, 234);
 }
 
 #ratings-container {
-    width: 85%;
+    width: 90%;
 }
 
 #radio-container {
@@ -62,23 +62,23 @@ input[type='text'] {
     align-items: center;
 }
 
-#movies-container {
+#cars-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.movie-cover {
-    width: 200px; 
+.car-cover {
+    width: 350px; 
     height: 300px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
 
-.movie-card {
-    background-color: blanchedalmond;
-    width: 200px;
+.car-card {
+    background-color: rgb(231, 16, 166);
+    width: 350px;
     margin: 20px; 
     display: flex;
     flex-direction: column;
@@ -88,12 +88,12 @@ input[type='text'] {
     border-top-right-radius: 15px;
 }
 
-.movie-title {
+.car-title {
     font-size: 18px;
     margin: 5px 0;
 }
 
-.movie-rating {
+.car-rating {
     font-size: 15px;
     margin: 5px 0;
 }
