@@ -12,7 +12,7 @@ const createCars = body => axios.post(baseURL, body).then(carsCallback).catch(er
 
 const deleteCar = id => axios.delete(`${baseURL}/${id}`).then(carsCallback).catch(errCallback)
 
-const updateCars = (id, type) => axios.put(`${baseURL}/${id}`, {type}).then(carsCallback).catch(errCallback)
+const updateCar = (id, type) => axios.put(`${baseURL}/${id}`, {type}).then(carsCallback).catch(errCallback)
 
 
 
@@ -48,7 +48,7 @@ function createCarCard(car) {
         <button onclick="updateCar(${car.id}, 'minus')">-</button>
         <p class="car-rating">${car.rating} stars</p>
         <button onclick="updateCar(${car.id}, 'plus')">+</button>
-    </div>
+        </div>
     <button onclick="deleteCar(${car.id})">delete</button>
     `
     
